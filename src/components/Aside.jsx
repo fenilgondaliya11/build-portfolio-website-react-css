@@ -6,18 +6,18 @@ const Aside = () => {
         <div className="sidebar-info">
           <figure className="avatar-box">
             <img
-              src={"/images/mamun.jpg"}
-              alt="Richard hanrick"
+              src={"/images/My Pc.jpg"}
+              alt="Fenil Gondaliya"
               width="80"
             />
           </figure>
 
           <div className="info-content">
             <h1 className="name" title="Richard hanrick">
-              Md AL Mamun
+              Fenil Gondaliya
             </h1>
 
-            <p className="title">Web developer</p>
+            <p className="title">Fronted developer</p>
           </div>
 
           <button className="info_more-btn" data-sidebar-btn>
@@ -41,7 +41,7 @@ const Aside = () => {
                 <p className="contact-title">Email</p>
 
                 <a href="mailto:richard@example.com" className="contact-link">
-                  richard@example.com
+                  fenilgondaliya2002@gmail.com
                 </a>
               </div>
             </li>
@@ -55,7 +55,7 @@ const Aside = () => {
                 <p className="contact-title">Phone</p>
 
                 <a href="tel:+12133522795" className="contact-link">
-                  +1 (213) 352-2795
+                  +91 6353389744
                 </a>
               </div>
             </li>
@@ -69,7 +69,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Birthday</p>
 
-                <time dateTime="1982-06-23">June 23, 1982</time>
+                <time dateTime="1982-06-23">October 13, 2002</time>
               </div>
             </li>
 
@@ -82,7 +82,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Location</p>
 
-                <address>Sacramento, California, USA</address>
+                <address>Rajkot, Gujarat, India</address>
               </div>
             </li>
           </ul>

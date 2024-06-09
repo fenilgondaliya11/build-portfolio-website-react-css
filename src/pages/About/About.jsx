@@ -1,6 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { FaLinkedin, FaSkype, FaEnvelope } from 'react-icons/fa';
 import Testimonial from "./Testimonial";
 import Service from "./Service";
 
@@ -17,8 +16,8 @@ const servicesData = [
   },
   {
     icon: "/images/icon-app.svg",
-    title: "Mobile apps",
-    description: "Professional development of applications for iOS and Android."
+    title: "frontend development",
+    description: "Professional development of frontend applications at the professional level."
   },
   {
     icon: "/images/icon-photo.svg",
@@ -27,50 +26,50 @@ const servicesData = [
   }
 ];
 
-
 const About = () => {
-  const [testimonials , setTestimonials ] = useState([]);
-  useEffect(()=> {
+  const [testimonials, setTestimonials] = useState([]);
+  useEffect(() => {
     fetch('testimonials.json').then(res => res.json()).then(data => {
       console.log(data)
       setTestimonials(data)
     });
   }, [])
+
+  const contactInfoStyle = {
+    display: 'flex',
+  };
+
+  const contactIconStyle = {
+    marginRight: '20px',
+  };
+
   return (
     <article className="about  active" data-page="about">
+      <header>
+        <h2 className="h2 article-title">About me</h2>
+      </header>
 
-    <header>
-      <h2 className="h2 article-title">About me</h2>
-    </header>
+      <section className="about-text">
+        <p>
+          Highly motivated React.js Developer with a Bachelor's degree in Information Technology. Currently honing my skills as
+          a Frontend Developer through an internship at TechnoComet Solutions. Proficient in developing interactive and responsive
+          web applications using React.js, HTML, CSS, and JavaScript. Passionate about staying updated with the latest technologies
+          and trends in frontend development to deliver innovative solutions.
+        </p>
 
-    <section className="about-text">
-      <p>
-        I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-        I enjoy
-        turning complex problems into simple, beautiful and intuitive designs.
-      </p>
+        <p>
+          As a dedicated React.js Developer, I specialize in crafting websites that are not only functional and user-friendly but
+          also visually captivating. With a keen eye for design, I infuse a personal touch into every project to ensure it's both
+          eye-catching and intuitive to navigate. My primary goal is to effectively convey your message and brand identity through creative
+          and innovative web designs. I have had the privilege of creating web solutions for numerous renowned brand companies, leveraging my
+          expertise in frontend development to deliver exceptional results.
+        </p>
+      </section>
 
-      <p>
-        My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-        Moreover, I
-        add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-        across your
-        message and identity in the most creative way. I created web design for many famous brand companies.
-      </p>
-    </section>
-
-
-    {/* <!--
-      - service
-    --> */}
-
-    <section className="service">
-
-      <h3 className="h3 service-title">What i'm doing</h3>
-
-      <ul className="service-list">
-
-      {servicesData.map((service, index) => (
+      <section className="service">
+        <h3 className="h3 service-title">What i'm doing</h3>
+        <ul className="service-list">
+          {servicesData.map((service, index) => (
             <Service
               key={index}
               icon={service.icon}
@@ -78,23 +77,13 @@ const About = () => {
               description={service.description}
             />
           ))}
+        </ul>
+      </section>
 
-      </ul>
-
-    </section>
-
-
-    {/* <!--
-      - testimonials
-    --> */}
-
-    <section className="testimonials">
-
-      <h3 className="h3 testimonials-title">Testimonials</h3>
-
-      <ul className="testimonials-list has-scrollbar">
-
-      {testimonials.map((testimonial, index) => (
+      <section className="testimonials">
+        <h3 className="h3 testimonials-title">Testimonials</h3>
+        <ul className="testimonials-list has-scrollbar">
+          {testimonials.map((testimonial, index) => (
             <Testimonial
               key={index}
               name={testimonial.name}
@@ -102,64 +91,26 @@ const About = () => {
               testimonial={testimonial.testimonial}
             />
           ))}
+        </ul>
+      </section>
 
-      </ul>
+      <h2 style={{ color: 'white' }}>Contact Me </h2>
+      <section className="contact-info" style={contactInfoStyle}>
+        <div className="contact-icon" style={contactIconStyle}>
+          <FaLinkedin color="#0077B5" size={30} />
+          <a href="https://www.linkedin.com/in/fenil-gondaliya-78236421b">LinkedIn</a>
+        </div>
+        <div className="contact-icon" style={contactIconStyle}>
+          <FaSkype color="#0077B5" size={30} />
+          <a href="https://join.skype.com/invite/tCuno8LDppLN">Skype</a>
+        </div>
+        <div className="contact-icon" style={contactIconStyle}>
+          <FaEnvelope color="#0077B5" size={30} />
+          <a href="mailto:fenilgondaliya2002@gmail.com" style={{color:'hsl(271.33deg 68.48% 32.35%)'}}>Email</a>
+        </div>
+      </section>
+    </article>
+  );
+};
 
-    </section>
-
-
-    {/* <!--
-      - clients
-    --> */}
-
-    <section className="clients">
-
-      <h3 className="h3 clients-title">Clients</h3>
-
-      <ul className="clients-list has-scrollbar">
-
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-1-color.png" alt="client logo"/>
-          </a>
-        </li>
-
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-2-color.png" alt="client logo"/>
-          </a>
-        </li>
-
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-3-color.png" alt="client logo"/>
-          </a>
-        </li>
-
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-4-color.png" alt="client logo"/>
-          </a>
-        </li>
-
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-5-color.png" alt="client logo"/>
-          </a>
-        </li>
-
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-6-color.png"alt="client logo"/>
-          </a>
-        </li>
-
-      </ul>
-
-    </section>
-
-  </article>
-  )
-}
-
-export default About
+export default About;
