@@ -17,13 +17,11 @@ const Resume = () => {
           </div>
           <h3 className="h3">Education</h3>
         </div>
-        <ol className="timeline-list">
+        <ol className="timeline-list" style={{textAlign: 'justify'}}>
           <TimelineItem
             title="B.Tech in Information Technology"
             date="RK University, 2021 — 2024"
-            description="Completed Bachelor of Technology in Information Technology with a commendable Cumulative Grade Point Average (CGPA) of 7.22. Engaged in a diverse range of subjects and projects, demonstrating a strong foundation in IT concepts and practices.
-
-"
+            description="Completed Bachelor of Technology in Information Technology with a commendable Cumulative Grade Point Average (CGPA) of 7.22. Engaged in a diverse range of subjects and projects, demonstrating a strong foundation in IT concepts and practices."
           />
           <TimelineItem
             title="Diploma in Computer Engineering"
@@ -45,7 +43,7 @@ const Resume = () => {
           </div>
           <h3 className="h3">Experience</h3>
         </div>
-        <ol className="timeline-list">
+        <ol className="timeline-list" style={{textAlign: 'justify'}}>
           <TimelineItem
             title="React Js Developer(TechnoComet Solutions)."
             date="2023 — Present"

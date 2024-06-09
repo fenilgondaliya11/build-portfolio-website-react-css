@@ -50,14 +50,14 @@ const About = () => {
       </header>
 
       <section className="about-text">
-        <p>
+        <p style={{textAlign: 'justify'}}>
           Highly motivated React.js Developer with a Bachelor's degree in Information Technology. Currently honing my skills as
           a Frontend Developer through an internship at TechnoComet Solutions. Proficient in developing interactive and responsive
           web applications using React.js, HTML, CSS, and JavaScript. Passionate about staying updated with the latest technologies
           and trends in frontend development to deliver innovative solutions.
         </p>
 
-        <p>
+        <p style={{textAlign: 'justify'}}>
           As a dedicated React.js Developer, I specialize in crafting websites that are not only functional and user-friendly but
           also visually captivating. With a keen eye for design, I infuse a personal touch into every project to ensure it's both
           eye-catching and intuitive to navigate. My primary goal is to effectively convey your message and brand identity through creative
